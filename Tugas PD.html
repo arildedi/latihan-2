@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabel</title>
+</head>
+<body>
+    <h2>Tabel Data</h2>
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Kelas</th>
+            <th>Alamat</th>
+        </tr>
+        <tbody id="isiData"></tbody>
+    </table>
+    <div id="hasil-output"></div>
+
+    <script>
+        var nosiswa = [1, 2, 3];
+        var namasiswa = ["Samsul", "Takdir", "Yanto"]; // Diperbaiki
+        var kelas = ["X DKV", "IX DKV", "XII DKV"]; // Diperbaiki penulisan XII
+        var alamatsiswa = [
+            "JL.Ahmad yani",
+            "JL.Kemerdekaan",
+            "JL.Kesatuan"
+            // Dihapus 1 data agar jumlahnya sama (3 data)
+        ];
+
+        var isiTabel = document.getElementById("isiData");
+        var isi = "";
+
+        // Kondisi loop diperbaiki
+        for (var i = 0; i < namasiswa.length; i++) {
+            isi += "<tr>"; 
+            isi += "<td>" + nosiswa[i] + "</td>";
+            isi += "<td>" + namasiswa[i] + "</td>";
+            isi += "<td>" + kelas[i] + "</td>"; // Memanggil variabel kelas
+            isi += "<td>" + alamatsiswa[i] + "</td>";
+            isi += "</tr>"; // Menutup baris
+        }
+
+        isiTabel.innerHTML = isi; // Memasukkan data ke dalam tabel
+    </script>
+</body>
+</html>
